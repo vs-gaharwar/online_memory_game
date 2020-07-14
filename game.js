@@ -61,7 +61,7 @@ $(".start-btn").click(function(){
   {
   //   console.log("started: " + level);
     userClickedPattern = [];
-    nextSequence();
+    setTimeout(function(){ nextSequence(); }, 1000);
     started = true;
     $(".start-btn").text("Reset");
     //setTimeout(function(){ $(".start-btn").hide(); }, 300);
