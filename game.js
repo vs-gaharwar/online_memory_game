@@ -71,6 +71,9 @@ $(".start-btn").click(function(){
   else if(txt === "Reset")
   {
     startOver();
+    playSound("wrong");
+    $("body").addClass("game-over");
+    setTimeout(function(){ $("body").removeClass("game-over") }, 200);
     userClickedPattern = [];
     $(".start-btn").text("Start");
     $("#level-title").text("Let's begin!");
